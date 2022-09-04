@@ -4,7 +4,11 @@
 длина которых меньше или равна трем (3) символам.
 */
 
-string[,] inputTable = new string [1,4];
+int m = new Random().Next(1,2);
+int n = new Random().Next(3,5);
+
+string[,] inputTable = new string [m,n];
+string [,] outputTable = new string [m,m];
 
 Console.WriteLine("Введите первую строку: ");
 inputTable[0,0] = Console.ReadLine();
@@ -17,6 +21,8 @@ inputTable[0,2] = Console.ReadLine();
 
 Console.WriteLine("Введите четверту строку: ");
 inputTable[0,3] = Console.ReadLine();
+
+
 
 
 
