@@ -4,6 +4,10 @@
 длина которых меньше или равна трем (3) символам.
 */
 
+FinalTest();
+
+void FinalTest()
+{
 int m = new Random().Next(1,2);
 int n = new Random().Next(3,5);
 
@@ -28,10 +32,4 @@ for (int i = 0; i < m; i++)
 }
 Console.WriteLine("Выходной массив:");
 Console.WriteLine(outputTable[k,l]);
-
-
-
-
-
-
-
+}
