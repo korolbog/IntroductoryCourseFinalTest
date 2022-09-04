@@ -10,17 +10,25 @@ int n = new Random().Next(3,5);
 string[,] inputTable = new string [m,n];
 string [,] outputTable = new string [m,m];
 
-Console.WriteLine("Введите первую строку: ");
-inputTable[0,0] = Console.ReadLine();
+int k = 0;
+int l = 0;
 
-Console.WriteLine("Введите вторую строку: ");
-inputTable[0,1] = Console.ReadLine();
+for (int i = 0; i < m; i++)
+{
+    for (int j = 0; j < n; j++)
+    {
+        Console.WriteLine($"Введите строку {j+1} из {n}: ");
+        inputTable[i,j] = Console.ReadLine();
+        
+        if (inputTable[i,j].Length <= 3)
+        {
+            outputTable[k,l] += $"{inputTable[i,j]} \t";
+        }
+    }
+}
+Console.WriteLine("Выходной массив:");
+Console.WriteLine(outputTable[k,l]);
 
-Console.WriteLine("Введите третью строку: ");
-inputTable[0,2] = Console.ReadLine();
-
-Console.WriteLine("Введите четверту строку: ");
-inputTable[0,3] = Console.ReadLine();
 
 
 
